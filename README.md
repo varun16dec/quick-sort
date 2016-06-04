@@ -1,7 +1,7 @@
 # quick-sort
 Quick sort
 
-  -Advantages of quicksort over merge sort
+  -Advantages of quicksort 
 
 	inplace sorting (no addition space is required)
 	sorting is done by swapping against a selected value called pivot in linear time O(n) (no constants hidden)
