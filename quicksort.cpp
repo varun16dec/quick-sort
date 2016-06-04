@@ -18,12 +18,12 @@ using namespace std;
 
 int partition(int arr[],int l,int r)
 {
-    int p=arr[l];
-    int i=l+1;
+    int p=arr[l];                   //pick first value as pivot
+    int i=l+1;                      //set i to first index
 
-    for(int j=i;j<=r;j++)
+    for(int j=i;j<=r;j++)           //loop j from first index to last index
     {
-        if(arr[j]<p)
+        if(arr[j]<p)                //if value at jth index is < p then swap the arr[i] and arr[j]
         {
             int t=arr[j];
             arr[j]=arr[i];
@@ -31,7 +31,7 @@ int partition(int arr[],int l,int r)
             i++;
         }
     }
-    int t=arr[l];
+    int t=arr[l];                   //after loop pivot must be placed at its rightful index in array
     arr[l]=arr[i-1];
     arr[i-1]=t;
 
