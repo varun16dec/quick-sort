@@ -35,6 +35,6 @@ Quick sort
 
 	-selecting a random index from the sub-array range
 	
-	-each recursion select a random pivot which try lessen the worse case scenario where complexity reaches O(n^2)
+	-each recursion select a random pivot which try to lessen the worse case scenario where complexity reaches O(n^2)
 	
 	-random selection of pivot ensures that even in the worst case we can attain almost O(nlogn)
