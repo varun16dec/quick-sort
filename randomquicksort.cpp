@@ -1,6 +1,19 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include<bits/stdc++.h>
+using namespace std;
+
+/**
+
+        Random no generation using hardware
+*/
+
+    random_device rd;   //obtain random no from hardware
+    mt19937 eng(rd());  //seed random no
+
+int getrandom(int l,int r)
+{
+    uniform_int_distribution<>distr(l,r);
+    return distr(eng);
+}
 
 /**
     l=first index                                           r =last index
@@ -16,12 +29,7 @@
 */
 int partition(int arr[],int l,int r)
 {
-    int random=l+rand()%r;      //generating random no
-
-    while(random>r)
-        random=l+random%r;      //random > r then make random into the range of l and r
-
-
+    int random=getrandom(l,r);      //generating random no
 
 /**
 *       if the first element is not pivot element then
